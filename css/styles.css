@@ -222,8 +222,10 @@ p { margin: 0 0 1em; }
 .wa-float:hover { transform: scale(1.07); }
 .wa-float svg { width: 30px; height: 30px; }
 
-.card__link { display: inline-block; margin-top: 14px; font-weight: 600; font-size: .95rem; text-decoration: none; }
-.card__link:hover { text-decoration: underline; }
+.card--link { display: block; color: var(--ink); text-decoration: none; }
+.card--link h3 { margin-bottom: 4px; }
+.card--link:hover { border-color: var(--brand); }
+.card__link { display: inline-block; margin-top: 8px; font-weight: 600; font-size: .95rem; color: var(--brand); }
 .btn--light { border-color: #fff; color: #fff; background: transparent; }
 .btn--light:hover { background: rgba(255,255,255,.1); }
 
@@ -235,6 +237,8 @@ p { margin: 0 0 1em; }
   color: var(--ink); text-decoration: none; font-size: .9rem; font-weight: 500;
 }
 .chips a:hover { border-color: var(--brand); color: var(--brand); }
+.chips a.is-active { background: var(--brand); border-color: var(--brand); color: #fff; }
+.treat[hidden] { display: none; }
 .treatments { padding: 32px 0 88px; }
 .treat {
   display: grid; grid-template-columns: 280px 1fr; gap: 40px;

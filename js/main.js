@@ -31,6 +31,29 @@ if (map && mapButton) {
   });
 }
 
+// Treatments page: show only the selected specialty (from the URL hash)
+const treatments = document.querySelectorAll('.treat');
+const chips = document.querySelectorAll('.chips a');
+
+if (treatments.length) {
+  const showTreatment = () => {
+    const id = location.hash.slice(1);
+    const selected = [...treatments].find((t) => t.id === id) || treatments[0];
+
+    treatments.forEach((t) => { t.hidden = t !== selected; });
+    chips.forEach((chip) => {
+      const active = chip.hash === `#${selected.id}`;
+      chip.classList.toggle('is-active', active);
+      if (active) chip.setAttribute('aria-current', 'true');
+      else chip.removeAttribute('aria-current');
+    });
+    window.scrollTo(0, 0);
+  };
+
+  showTreatment();
+  window.addEventListener('hashchange', showTreatment);
+}
+
 // Current year in footer
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
