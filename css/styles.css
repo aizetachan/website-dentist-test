@@ -129,6 +129,8 @@ p { margin: 0 0 1em; }
 .section--dark h2 { color: #fff; }
 .section--dark .eyebrow { color: var(--accent); }
 .section__head { max-width: 640px; margin-bottom: 48px; }
+.section__head--center { margin-inline: auto; margin-bottom: 32px; }
+.section__head--center .lead { margin-inline: auto; }
 @media (max-width: 600px) { .section { padding: 64px 0; } }
 
 /* Servicios */
