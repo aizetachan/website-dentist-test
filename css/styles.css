@@ -154,7 +154,11 @@ p { margin: 0 0 1em; }
 
 /* Equipo */
 .team { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; }
-.member { margin: 0; }
+.member { margin: 0; position: relative; }
+.member__tag {
+  position: absolute; top: 10px; left: 10px; padding: 3px 10px; border-radius: 999px;
+  background: rgba(15, 46, 51, .75); color: #fff; font-size: .72rem; font-weight: 500;
+}
 .member img {
   width: 100%; aspect-ratio: 4 / 5; height: auto; object-fit: cover;
   border-radius: var(--radius); background: var(--brand-soft); margin-bottom: 16px;
