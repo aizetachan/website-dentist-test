@@ -222,6 +222,45 @@ p { margin: 0 0 1em; }
 .wa-float:hover { transform: scale(1.07); }
 .wa-float svg { width: 30px; height: 30px; }
 
+.card__link { display: inline-block; margin-top: 14px; font-weight: 600; font-size: .95rem; text-decoration: none; }
+.card__link:hover { text-decoration: underline; }
+.btn--light { border-color: #fff; color: #fff; background: transparent; }
+.btn--light:hover { background: rgba(255,255,255,.1); }
+
+/* Página de tratamientos */
+.page-hero { padding: 56px 0 24px; background: radial-gradient(ellipse at 85% 0%, var(--brand-soft), transparent 60%); }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.chips a {
+  padding: 8px 16px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line);
+  color: var(--ink); text-decoration: none; font-size: .9rem; font-weight: 500;
+}
+.chips a:hover { border-color: var(--brand); color: var(--brand); }
+.treatments { padding: 32px 0 88px; }
+.treat {
+  display: grid; grid-template-columns: 280px 1fr; gap: 40px;
+  padding: 48px 0; border-bottom: 1px solid var(--line);
+}
+.treat:last-child { border-bottom: 0; }
+.treat__head { position: sticky; top: 100px; align-self: start; }
+.treat__head h2 { font-size: clamp(1.5rem, 3vw, 1.9rem); }
+.treat__body { max-width: 640px; }
+.treat__body > p:first-child { font-size: 1.1rem; }
+.treat__body h3 { margin-top: 1.6em; }
+.treat__body p { color: var(--ink-soft); }
+.checklist { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.checklist li { position: relative; padding-left: 30px; color: var(--ink-soft); }
+.checklist li strong { color: var(--ink); font-weight: 600; }
+.checklist li::before {
+  content: ""; position: absolute; left: 0; top: .3em; width: 18px; height: 18px; border-radius: 50%;
+  background: var(--brand-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%230e7c86' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 12px no-repeat;
+}
+@media (max-width: 760px) {
+  .treat { grid-template-columns: 1fr; gap: 12px; padding: 36px 0; }
+  .treat__head { position: static; display: flex; align-items: center; gap: 14px; }
+  .treat__head .card__icon { margin: 0; }
+  .treat__head h2 { margin: 0; }
+}
+
 /* Páginas legales / gracias */
 .page { padding: 56px 0 88px; max-width: 760px; }
 .page h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); }
