@@ -1,14 +1,16 @@
 # Web Clínica Dental
 
-Web de una sola página para una clínica dental. HTML + CSS + JS, sin instalar nada. Publicada en Netlify.
+Web de la clínica dental Dentimédica (Cercedilla). HTML + CSS + JS, sin instalar nada. Publicada en Netlify.
 
 ## Estructura
 
 | Archivo | Para qué sirve |
 |---|---|
-| `index.html` | La página principal (todas las secciones) |
+| `index.html` | La página principal (servicios, equipo, cita, horario…) |
+| `tratamientos.html` | Detalle de tratamientos por especialidad (se elige con los botones de arriba) |
 | `css/styles.css` | Diseño. Los colores de marca están arriba del todo (`--brand`) |
-| `js/main.js` | Menú del móvil y carga del mapa |
+| `js/main.js` | Menú del móvil, carga del mapa y selector de tratamientos |
+| `img/equipo/` | Fotos del equipo (las actuales son provisionales) |
 | `gracias.html` | Página que ve el paciente tras pedir cita |
 | `aviso-legal.html`, `privacidad.html`, `cookies.html` | Textos legales (plantillas) |
 | `netlify.toml` | Configuración de Netlify |
@@ -19,8 +21,8 @@ Busca `EDITAR` en todos los archivos `.html`: cada comentario marca un dato a su
 (nombre, teléfono, WhatsApp, dirección, horario, nº de registro sanitario, NIF…).
 
 - **WhatsApp**: el formato del enlace es `https://wa.me/34XXXXXXXXX` (34 + número, sin espacios ni `+`).
-- **Opiniones**: las actuales son de ejemplo. Usa reseñas reales con permiso del paciente.
-- **Fotos**: añádelas a `img/` y sustituye la ilustración del bloque `hero__visual`.
+- **Opiniones**: la sección enlaza a las reseñas de Google. Si añades reseñas en la web, que sean reales y con permiso del paciente.
+- **Fotos del equipo**: sustituye las de `img/equipo/` por las reales (mismo nombre de archivo o cambia la ruta en `index.html`).
 
 ## Ver la web en local
 
